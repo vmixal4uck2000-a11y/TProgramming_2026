@@ -5,7 +5,7 @@ function calculate(a: number, b: number, x: number): number {
 }
 
 function taskA(a: number, b: number, xStart: number, xEnd: number, deltax: number): void {
-    console.log("\n               задание А                  ")
+    console.log("\nзадание А")
     console.log(calculate(a, b, xStart));
     console.log(calculate(a, b, xStart + deltax));
     console.log(calculate(a, b, xStart + deltax * 2));
@@ -15,7 +15,7 @@ function taskA(a: number, b: number, xStart: number, xEnd: number, deltax: numbe
 }
 
 function taskB(a: number, b: number, x1: number, x2: number, x3: number, x4: number, x5: number): void {
-    console.log("\n               задание B                  ")
+    console.log("\nзадание B")
     console.log(calculate(a, b, x1));
     console.log(calculate(a, b, x2));
     console.log(calculate(a, b, x3));
