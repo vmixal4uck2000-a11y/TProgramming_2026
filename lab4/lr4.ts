@@ -3,7 +3,6 @@ export function calculate(a: number, b: number, x: number): number {
     const niz: number = Math.pow(Math.log10(x), 2);
     return Math.sqrt(verh / niz);
 }
-
 export function taskA(a: number, b: number, xStart: number, xEnd: number, deltax: number): number[] {
     console.log("\nзадание А")
     let resA: number[] = [];
@@ -12,7 +11,6 @@ export function taskA(a: number, b: number, xStart: number, xEnd: number, deltax
     }
     return resA;
 }
-
 export function taskB(a: number, b: number, x: number[]): number[] {
     console.log("\nзадание B")
     let resB: number[] = [];
@@ -21,9 +19,6 @@ export function taskB(a: number, b: number, x: number[]): number[] {
     }
     return resB;
 }
-
-
 let testB: number[] = [2.4, 2.8, 3.9, 4.7, 3.16];
-
 console.log(taskA(7.2, 4.2, 1.81, 5.31, 0.7));
 console.log(taskB(7.2, 4.2, testB));
