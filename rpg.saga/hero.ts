@@ -5,12 +5,14 @@
     private _klass: string;
     _gorit: boolean = false;
     _stan: boolean = false;
+    _kd: number
 
     constructor(hp : number, name: string, str: number, klass: string) {
         this._name = name;
         this._hp = hp;
         this._str = str;
         this._klass = klass;
+        this._kd = 0
     }
     get_hp(): number{
         return this._hp;
@@ -58,12 +60,15 @@
             return;
         }
         
-        if(Math.random() < shans) {
+        if((Math.random() < shans) && (this._kd === 0)) {
             this.skill(vrag);
         }
         else{
             this.ataka(vrag, this._str);
             console.log(`${this.get_name()}(${this.get_klass()}) ударил на ${this._str}`);
+            if(this._kd > 0){
+                this._kd -= 1
+            }
         }
 
     }
@@ -74,8 +79,22 @@ export class SER_RITSAR extends HERO {
         super(hp, name, str, "Рыцарь");
     }
     skill(vrag: HERO): void {
-        this.ataka(vrag, this.get_str() * 1.3);
+        if (this.get_hp() <= 40){
+            this.ulta(vrag);
+            console.log(`${this.get_name()}(${this.get_klass()}) использует ульту и наносит ${this.get_str()*5}`);
+        }
+        else{
+            this.ataka(vrag, this.get_str() * 1.3);
+        this._kd = 3;
         console.log(`${this.get_name()}(${this.get_klass()}) использует Удар возмездия`);
+        }
+        
+    }
+    ulta(vrag: HERO): void{
+        {
+           let dmg: number = this.get_str() * 5;
+           this.ataka(vrag, dmg);
+        }
     }
 }
 export class LUCHNIK extends HERO {
@@ -102,6 +121,7 @@ export class MAGA extends HERO {
     }
     skill(vrag: HERO): void {
         vrag._stan = true;
+        this._kd = 3
         console.log(`${this.get_name()}(${this.get_klass()}) использует Заворожение`);
     }
 }
