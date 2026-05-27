@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Введение -->
+        <div id="slide1" class="slide active">
+            <div>
+                <h1>🎯 Знакомьтесь, Present Perfect!</h1>
+                <div class="card-content">
+                    <p>Present Perfect — это хитрый мостик между прошлым и настоящим. Он показывает, что действие
+                        <strong>уже случилось</strong>, но его результат <strong>важен сейчас</strong>. Или что опыт у
+                        человека есть, а когда именно — неважно.
+                    </p>
+                    <h3>Когда используем:</h3>
+                    <ul>
+                        <li>
+                            <p>✅ <strong>Результат важен сейчас:</strong> (Я потерял ключи — и сейчас не могу войти.)
+                            </p>
+                        </li>
+                        <li>
+                            <p>🌍 <strong>Жизненный опыт:</strong> (Я был в Италии. — неважно когда, главное — был.)</p>
+                        </li>
+                        <li>
+                            <p>🆕 <strong>Только что случилось (just):</strong> (Он только что ушёл.)</p>
+                        </li>
+                        <li>
+                            <p>📅 <strong>Действие в незаконченный период:</strong> (Я выпил три чашки кофе сегодня —
+                                день ещё не закончен.)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Утверждение -->
+        <div id="slide2" class="slide">
+            <div>
+                <h1>🧩 Как слепить утверждение</h1>
+                <div class="card-content">
+                    <p>Формула: <strong>have / has + глагол в 3-й форме (V3)</strong>.</p>
+                    <ul>
+                        <li>
+                            👥 <strong>I / You / We / They → have</strong>
+                            <p>👉 I <strong>have seen</strong> this film. (Я видел этот фильм.)</p>
+                            <p>👉 They <strong>have arrived</strong>. (Они прибыли.)</p>
+                        </li>
+                        <li>
+                            🧑‍🏫 <strong>He / She / It → has</strong>
+                            <p>👉 She <strong>has lost</strong> her phone. (Она потеряла телефон.)</p>
+                            <p>👉 He <strong>has gone</strong> to work. (Он ушёл на работу.)</p>
+                        </li>
+                    </ul>
+                    <p><strong>Что такое V3?</strong></p>
+                    <ul>
+                        <li>
+                            <p>🔹 Правильные глаголы: это V+ed (как в Past Simple): work → worked, play → played</p>
+                        </li>
+                        <li>
+                            <p>🔹 Неправильные глаголы: третья форма из таблицы (go → gone, see → seen, eat → eaten)</p>
+                        </li>
+                    </ul>
+                    <p><strong>Сокращения:</strong> have → 've, has → 's</p>
+                    <p>👉 I've seen, She's gone.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Отрицания и вопросы -->
+        <div id="slide3" class="slide">
+            <div>
+                <h1>🙅 Отрицания и ❓ Вопросы</h1>
+                <div class="card-content">
+                    <p>Работаем с have/has как с обычными помощниками.</p>
+                    <ul>
+                        <li>
+                            <strong>Отрицание:</strong> have/has + not → haven't / hasn't
+                            <p>👉 I <strong>haven't seen</strong> this film. (Я не видел этот фильм.)</p>
+                            <p>👉 She <strong>hasn't arrived</strong> yet. (Она ещё не приехала.)</p>
+                        </li>
+                        <li>
+                            <strong>Вопрос:</strong> Have/Has + кто? + V3?
+                            <p>👉 <strong>Have</strong> you <strong>seen</strong> this film? (Ты видел этот фильм?)</p>
+                            <p>👉 <strong>Has</strong> she <strong>arrived</strong>? (Она приехала?)</p>
+                        </li>
+                    </ul>
+                    <p>✅ Краткие ответы: Yes, I have. / No, I haven't. Yes, she has. / No, she hasn't.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Слова-маркеры -->
+        <div id="slide4" class="slide">
+            <div>
+                <h1>📍 Слова-маркеры (лучшие друзья Present Perfect)</h1>
+                <div class="card-content">
+                    <p>Эти слова прямо сигналят: «ставь Present Perfect!»</p>
+                    <ul>
+                        <li>
+                            <p>🔹 <strong>ever</strong> (когда-либо) — в вопросах: Have you ever been to Paris?</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>never</strong> (никогда): I have never seen snow.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>just</strong> (только что): She has just left.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>already</strong> (уже) — в утверждениях: I've already eaten.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>yet</strong> (ещё) — в вопросах и отрицаниях: Have you finished yet? / I
+                                haven't finished yet.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>recently / lately</strong> (недавно): He has recently started a new job.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>for</strong> (в течение — о периоде): I've lived here for 10 years.</p>
+                        </li>
+                        <li>
+                            <p>🔹 <strong>since</strong> (с какого‑то момента): She has worked here since 2020.</p>
+                        </li>
+                    </ul>
+                    <p>👉 I've <strong>already</strong> done my homework.</p>
+                    <p>👉 Have you <strong>ever</strong> tried sushi?</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 5: Типичные ошибки -->
+        <div id="slide5" class="slide">
+            <div>
+                <h1>🚫 Ошибки, которые бесят (и как их избежать)</h1>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            ❌ <strong>Ошибка 1: Путаем с Past Simple</strong>
+                            <p>I have seen this film yesterday. ❌</p>
+                            <p>I saw this film yesterday. ✅ (есть точное время — yesterday)</p>
+                            <p>I have seen this film. ✅ (без времени — просто опыт)</p>
+                            <p><em>Фишка:</em> Если есть точное время в прошлом (yesterday, last week, in 2010) — Past
+                                Simple. Если время не указано или период ещё не закончился (today, this week) — Present
+                                Perfect.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 2: Неправильная третья форма</strong>
+                            <p>She has went home. ❌</p>
+                            <p>She has <strong>gone</strong> home. ✅</p>
+                            <p><em>Фишка:</em> У неправильных глаголов третья форма своя (go-went-gone). Надо учить!</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 3: Забыли have/has</strong>
+                            <p>I seen this film. ❌</p>
+                            <p>I <strong>have seen</strong> this film. ✅</p>
+                            <p><em>Фишка:</em> Без have/has это просто Past Simple (I saw), а не Present Perfect.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 4: Неправильное место yet/already</strong>
+                            <p>I have done already it. ❌</p>
+                            <p>I have <strong>already done</strong> it. ✅ (already — перед смысловым глаголом)</p>
+                            <p>I haven't done it yet. ✅ (yet — в конце)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_tense', tense_name='prPerfect') }}"
+                style="display: inline;">
+                <button type="submit" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function goToRules() {
+            window.location.href = "{{ url_for('rules') }}";
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>

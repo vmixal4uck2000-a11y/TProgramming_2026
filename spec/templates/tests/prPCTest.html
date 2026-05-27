@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тест: Present Perfect Continuous</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='test_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Вопросы 1–5 -->
+        <div id="slide1" class="slide active">
+            <h1>📝 Тест: Present Perfect Continuous (часть 1/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>1. I ___ (wait) for you for an hour!</p>
+                    <div class="options">
+                        <label><input type="radio" name="q0" value="0"> have been waiting</label>
+                        <label><input type="radio" name="q0" value="1"> has been waiting</label>
+                        <label><input type="radio" name="q0" value="2"> have waited</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>2. She ___ (work) here since 2018.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="0"> has been working</label>
+                        <label><input type="radio" name="q1" value="1"> have been working</label>
+                        <label><input type="radio" name="q1" value="2"> has worked</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>3. They ___ (not / play) football recently.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="0"> haven't been playing</label>
+                        <label><input type="radio" name="q2" value="1"> hasn't been playing</label>
+                        <label><input type="radio" name="q2" value="2"> haven't played</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>4. How long ___ you ___ (learn) English?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="0"> have / been learning</label>
+                        <label><input type="radio" name="q3" value="1"> have / learned</label>
+                        <label><input type="radio" name="q3" value="2"> has / been learning</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>5. He looks tired because he ___ (run).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="0"> has been running</label>
+                        <label><input type="radio" name="q4" value="1"> have been running</label>
+                        <label><input type="radio" name="q4" value="2"> has run</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Вопросы 6–10 -->
+        <div id="slide2" class="slide">
+            <h1>📝 Тест: Present Perfect Continuous (часть 2/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>6. I ___ (wait) for the bus since 8 am.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="0"> have been waiting</label>
+                        <label><input type="radio" name="q5" value="1"> have waited</label>
+                        <label><input type="radio" name="q5" value="2"> am waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>7. She ___ (study) all morning.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="0"> has been studying</label>
+                        <label><input type="radio" name="q6" value="1"> has studied</label>
+                        <label><input type="radio" name="q6" value="2"> have been studying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>8. We ___ (not / sleep) well lately.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="0"> haven't been sleeping</label>
+                        <label><input type="radio" name="q7" value="1"> hasn't been sleeping</label>
+                        <label><input type="radio" name="q7" value="2"> haven't slept</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>9. ___ they ___ (live) here for a long time?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="0"> Have / been living</label>
+                        <label><input type="radio" name="q8" value="1"> Have / lived</label>
+                        <label><input type="radio" name="q8" value="2"> Has / been living</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>10. Your eyes are red. ___ you ___ (cry)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="0"> Have / been crying</label>
+                        <label><input type="radio" name="q9" value="1"> Have / cried</label>
+                        <label><input type="radio" name="q9" value="2"> Has / been crying</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Вопросы 11–15 -->
+        <div id="slide3" class="slide">
+            <h1>📝 Тест: Present Perfect Continuous (часть 3/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>11. The ground is wet. It ___ (rain).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="0"> has been raining</label>
+                        <label><input type="radio" name="q10" value="1"> have been raining</label>
+                        <label><input type="radio" name="q10" value="2"> has rained</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>12. I ___ (try) to call you all day.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="0"> have been trying</label>
+                        <label><input type="radio" name="q11" value="1"> have tried</label>
+                        <label><input type="radio" name="q11" value="2"> am trying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>13. He ___ (not / feel) well recently.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="0"> hasn't been feeling</label>
+                        <label><input type="radio" name="q12" value="1"> haven't been feeling</label>
+                        <label><input type="radio" name="q12" value="2"> hasn't felt</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>14. How long ___ they ___ (date)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="0"> have / been dating</label>
+                        <label><input type="radio" name="q13" value="1"> have / dated</label>
+                        <label><input type="radio" name="q13" value="2"> has / been dating</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>15. She is out of breath because she ___ (run).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="0"> has been running</label>
+                        <label><input type="radio" name="q14" value="1"> have been running</label>
+                        <label><input type="radio" name="q14" value="2"> has run</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Вопросы 16–20 + кнопка Завершить + результат -->
+        <div id="slide4" class="slide">
+            <h1>📝 Тест: Present Perfect Continuous (часть 4/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>16. We ___ (know) each other for 10 years. (глагол состояния – правильный ответ в Simple)</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="0"> have known</label>
+                        <label><input type="radio" name="q15" value="1"> have been knowing</label>
+                        <label><input type="radio" name="q15" value="2"> knew</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>17. I ___ (wait) for you since 5 o'clock.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="0"> have been waiting</label>
+                        <label><input type="radio" name="q16" value="1"> have waited</label>
+                        <label><input type="radio" name="q16" value="2"> has been waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>18. They ___ (build) the house for two years.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="0"> have been building</label>
+                        <label><input type="radio" name="q17" value="1"> have built</label>
+                        <label><input type="radio" name="q17" value="2"> has been building</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>19. He ___ (not / work) here very long.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="0"> hasn't been working</label>
+                        <label><input type="radio" name="q18" value="1"> haven't been working</label>
+                        <label><input type="radio" name="q18" value="2"> hasn't worked</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>20. How long ___ you ___ (study) for the exam?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="0"> have / been studying</label>
+                        <label><input type="radio" name="q19" value="1"> have / studied</label>
+                        <label><input type="radio" name="q19" value="2"> has / been studying</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок для результата -->
+            <div id="result-box" style="display: none;"></div>
+
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_test', test_name='prPC') }}" id="test-form"
+                style="display: inline;">
+                <input type="hidden" name="score" id="score-input" value="0">
+                <button type="button" onclick="finishTestAndSubmit()" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+
+    <script>
+        // --- Правильные ответы для Present Perfect Continuous (индексы 0-2) ---
+        const correctAnswers = [
+            0, // q0: have been waiting
+            0, // q1: has been working
+            0, // q2: haven't been playing
+            0, // q3: have / been learning
+            0, // q4: has been running
+            0, // q5: have been waiting
+            0, // q6: has been studying
+            0, // q7: haven't been sleeping
+            0, // q8: Have / been living
+            0, // q9: Have / been crying
+            0, // q10: has been raining
+            0, // q11: have been trying
+            0, // q12: hasn't been feeling
+            0, // q13: have / been dating
+            0, // q14: has been running
+            0, // q15: have known  (глагол состояния, не Continuous)
+            0, // q16: have been waiting
+            0, // q17: have been building
+            0, // q18: hasn't been working
+            0  // q19: have / been studying
+        ];
+
+        let userAnswers = new Array(20).fill(null);
+        let current = 1;
+        const total = 4;
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+
+        function setupRadioListeners() {
+            for (let i = 0; i < 20; i++) {
+                const radios = document.getElementsByName(`q${i}`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.checked) {
+                            userAnswers[i] = parseInt(this.value);
+                        }
+                    });
+                });
+            }
+        }
+
+        function restoreRadioFromAnswers() {
+            for (let i = 0; i < 20; i++) {
+                const answer = userAnswers[i];
+                if (answer !== null) {
+                    const radios = document.getElementsByName(`q${i}`);
+                    radios.forEach(radio => {
+                        if (parseInt(radio.value) === answer) {
+                            radio.checked = true;
+                        }
+                    });
+                }
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+            for (let i = 0; i < 20; i++) {
+                if (userAnswers[i] !== null && userAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+            return score;
+        }
+
+        function finishTest() {
+            let score = calculateScore();
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+        }
+
+        function finishTestAndSubmit() {
+            let score = calculateScore();
+            // Показываем результат
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+            // Заполняем скрытое поле и отправляем форму
+            document.getElementById('score-input').value = score;
+            document.getElementById('test-form').submit();
+        }
+
+        window.onload = function () {
+            setupRadioListeners();
+            restoreRadioFromAnswers();
+        };
+    </script>
+</body>
+
+</html>

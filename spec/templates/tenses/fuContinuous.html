@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Введение -->
+        <div id="slide1" class="slide active">
+            <div>
+                <h1>⏳ Знакомьтесь, Future Continuous!</h1>
+                <div class="card-content">
+                    <p>Future Continuous (он же Future Progressive) — это время, которое показывает, что действие
+                        <strong>будет в процессе</strong> в какой‑то момент в будущем. Мы как будто включаем камеру и
+                        смотрим, что будет происходить в конкретное время.
+                    </p>
+                    <h3>Когда используем:</h3>
+                    <ul>
+                        <li>
+                            <p>⏰ <strong>Действие в конкретный момент в будущем:</strong> (Завтра в 7 утра я буду уже
+                                лететь в отпуск.)</p>
+                        </li>
+                        <li>
+                            <p>🔄 <strong>Параллельные действия в будущем:</strong> (Пока ты будешь спать, я буду
+                                работать.)</p>
+                        </li>
+                        <li>
+                            <p>🤝 <strong>Вежливый вопрос о планах:</strong> (Ты будешь пользоваться машиной вечером? —
+                                чтобы не напрямую спрашивать.)</p>
+                        </li>
+                        <li>
+                            <p>🎯 <strong>Действие, которое точно произойдёт (как часть
+                                    расписания/договорённости):</strong> (Завтра в это время мы будем уже загорать на
+                                пляже.)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Утверждение -->
+        <div id="slide2" class="slide">
+            <div>
+                <h1>🏗 Как слепить утверждение</h1>
+                <div class="card-content">
+                    <p>Формула: <strong>will be + глагол с окончанием -ing</strong>.</p>
+                    <p>Для всех лиц (I, you, he, she, it, we, they) — <strong>одинаково</strong>. Красота!</p>
+                    <ul>
+                        <li>
+                            <p>👉 I <strong>will be working</strong> at 5 pm tomorrow. (Я буду работать завтра в 5
+                                вечера.)</p>
+                            <p>👉 She <strong>will be sleeping</strong> when you arrive. (Она будет спать, когда ты
+                                приедешь.)</p>
+                            <p>👉 They <strong>will be waiting</strong> for us at the airport. (Они будут ждать нас в
+                                аэропорту.)</p>
+                        </li>
+                    </ul>
+                    <p><strong>Правила прибавления -ing</strong> (те же, что и в Continuous):</p>
+                    <ul>
+                        <li>
+                            <p>🔹 обычно +ing: play → playing</p>
+                        </li>
+                        <li>
+                            <p>🔹 глаголы на -e → e выпадает: make → making</p>
+                        </li>
+                        <li>
+                            <p>🔹 короткие глаголы (одна гласная + одна согласная под ударением) → удвоение: sit →
+                                sitting, run → running</p>
+                        </li>
+                        <li>
+                            <p>🔹 -ie → -y: lie → lying</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Отрицания и вопросы -->
+        <div id="slide3" class="slide">
+            <div>
+                <h1>🙅 Отрицания и ❓ Вопросы</h1>
+                <div class="card-content">
+                    <p>Всё просто: <strong>will</strong> делает всю работу, <strong>be</strong> остаётся на месте.</p>
+                    <ul>
+                        <li>
+                            <strong>Отрицание:</strong> will + not + be + глагол-ing → <strong>will not be / won't
+                                be</strong>
+                            <p>👉 I <strong>won't be working</strong> at 5 pm. (Я не буду работать в 5 вечера.)</p>
+                            <p>👉 She <strong>will not (won't) be sleeping</strong> when you call. (Она не будет спать,
+                                когда ты позвонишь.)</p>
+                        </li>
+                        <li>
+                            <strong>Вопрос:</strong> Will + кто? + be + глагол-ing?
+                            <p>👉 <strong>Will</strong> you <strong>be using</strong> the car tonight? (Ты будешь
+                                пользоваться машиной сегодня вечером?)</p>
+                            <p>👉 <strong>Will</strong> they <strong>be waiting</strong> for us? (Они будут ждать нас?)
+                            </p>
+                        </li>
+                    </ul>
+                    <p>✅ Краткие ответы: Yes, I will. / No, I won't. (без be в кратком ответе)</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Слова-маркеры -->
+        <div id="slide4" class="slide">
+            <div>
+                <h1>📅 Слова-маркеры (указатели на процесс в будущем)</h1>
+                <div class="card-content">
+                    <p>Эти фразы помогут понять, что нужен Future Continuous.</p>
+                    <ul>
+                        <li>
+                            <p>🕐 <strong>at this time tomorrow</strong> (завтра в это же время)</p>
+                        </li>
+                        <li>
+                            <p>⏰ <strong>at 7 pm next Monday</strong> (в 7 вечера в следующий понедельник)</p>
+                        </li>
+                        <li>
+                            <p>📆 <strong>all day tomorrow / all evening</strong> (весь день завтра / весь вечер)</p>
+                        </li>
+                        <li>
+                            <p>🔄 <strong>from 5 to 7 tomorrow</strong> (с 5 до 7 завтра)</p>
+                        </li>
+                        <li>
+                            <p>🤝 <strong>while + действие в будущем</strong>: While you are shopping, I'll be cooking.
+                                (Пока ты будешь ходить по магазинам, я буду готовить.)</p>
+                        </li>
+                        <li>
+                            <p>⚡️ <strong>when + короткое действие</strong>: When you arrive, we'll be having dinner.
+                                (Когда ты приедешь, мы будем ужинать.)</p>
+                        </li>
+                    </ul>
+                    <p>👉 This time next week, I <strong>will be lying</strong> on a beach.</p>
+                    <p>👉 Don't call at 8 am — I <strong>'ll be driving</strong> to work.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 5: Типичные ошибки -->
+        <div id="slide5" class="slide">
+            <div>
+                <h1>💥 Ошибки, которые бесят (и как их избежать)</h1>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            ❌ <strong>Ошибка 1: Забыли be</strong>
+                            <p>I will working at 5 pm. ❌</p>
+                            <p>I will <strong>be working</strong> at 5 pm. ✅</p>
+                            <p><em>Фишка:</em> В Future Continuous обязательно нужен be после will.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 2: Путаем Future Simple и Future Continuous</strong>
+                            <p>I will work at 5 pm. ❌ (если хотим подчеркнуть процесс)</p>
+                            <p>I will be working at 5 pm. ✅</p>
+                            <p><em>Фишка:</em> Future Simple — просто факт, Future Continuous — процесс в конкретный
+                                момент.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 3: Неправильное -ing</strong>
+                            <p>She will be writeing an exam. ❌</p>
+                            <p>She will be <strong>writing</strong> an exam. ✅</p>
+                            <p><em>Фишка:</em> Помни про выпадение -e и удвоение согласных.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 4: Двойное will в придаточных</strong>
+                            <p>If it will be raining, we will stay home. ❌</p>
+                            <p>If it <strong>is raining</strong>, we will stay home. ✅</p>
+                            <p><em>Фишка:</em> После if, when, as soon as (в придаточных времени/условия) используем
+                                Present Simple или Present Continuous, даже если речь о будущем.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_tense', tense_name='fuContinuous') }}"
+                style="display: inline;">
+                <button type="submit" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function goToRules() {
+            window.location.href = "{{ url_for('rules') }}";
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>

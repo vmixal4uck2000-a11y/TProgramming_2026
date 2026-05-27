@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тест: Past Perfect Continuous</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='test_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Вопросы 1–5 -->
+        <div id="slide1" class="slide active">
+            <h1>📝 Тест: Past Perfect Continuous (часть 1/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>1. They ___ (wait) for an hour before the bus arrived.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q0" value="0"> had been waiting</label>
+                        <label><input type="radio" name="q0" value="1"> had waited</label>
+                        <label><input type="radio" name="q0" value="2"> were waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>2. She ___ (work) all day, so she was tired.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="0"> had been working</label>
+                        <label><input type="radio" name="q1" value="1"> had worked</label>
+                        <label><input type="radio" name="q1" value="2"> was working</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>3. We ___ (not / sleep) well the night before.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="0"> hadn't been sleeping</label>
+                        <label><input type="radio" name="q2" value="1"> hadn't slept</label>
+                        <label><input type="radio" name="q2" value="2"> weren't sleeping</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>4. ___ he ___ (study) long before the exam?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="0"> Had / been studying</label>
+                        <label><input type="radio" name="q3" value="1"> Had / studied</label>
+                        <label><input type="radio" name="q3" value="2"> Was / studying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>5. I was wet because I ___ (walk) in the rain.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="0"> had been walking</label>
+                        <label><input type="radio" name="q4" value="1"> had walked</label>
+                        <label><input type="radio" name="q4" value="2"> was walking</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Вопросы 6–10 -->
+        <div id="slide2" class="slide">
+            <h1>📝 Тест: Past Perfect Continuous (часть 2/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>6. How long ___ they ___ (date) before they got married?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="0"> had / been dating</label>
+                        <label><input type="radio" name="q5" value="1"> had / dated</label>
+                        <label><input type="radio" name="q5" value="2"> were / dating</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>7. The ground was wet. It ___ (rain) all night.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="0"> had been raining</label>
+                        <label><input type="radio" name="q6" value="1"> had rained</label>
+                        <label><input type="radio" name="q6" value="2"> was raining</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>8. He failed the test because he ___ (not / attend) classes.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="0"> hadn't been attending</label>
+                        <label><input type="radio" name="q7" value="1"> hadn't attended</label>
+                        <label><input type="radio" name="q7" value="2"> didn't attend</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>9. She ___ (live) in London for five years before she moved.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="0"> had been living</label>
+                        <label><input type="radio" name="q8" value="1"> had lived</label>
+                        <label><input type="radio" name="q8" value="2"> was living</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>10. They were covered in paint because they ___ (paint) the house.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="0"> had been painting</label>
+                        <label><input type="radio" name="q9" value="1"> had painted</label>
+                        <label><input type="radio" name="q9" value="2"> were painting</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Вопросы 11–15 -->
+        <div id="slide3" class="slide">
+            <h1>📝 Тест: Past Perfect Continuous (часть 3/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>11. When I arrived, they ___ (wait) for me for half an hour.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="0"> had been waiting</label>
+                        <label><input type="radio" name="q10" value="1"> had waited</label>
+                        <label><input type="radio" name="q10" value="2"> were waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>12. ___ she ___ (cry) before you came?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="0"> Had / been crying</label>
+                        <label><input type="radio" name="q11" value="1"> Had / cried</label>
+                        <label><input type="radio" name="q11" value="2"> Was / crying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>13. He was out of breath because he ___ (run).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="0"> had been running</label>
+                        <label><input type="radio" name="q12" value="1"> had run</label>
+                        <label><input type="radio" name="q12" value="2"> was running</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>14. We ___ (travel) for three days before we reached the destination.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="0"> had been travelling</label>
+                        <label><input type="radio" name="q13" value="1"> had travelled</label>
+                        <label><input type="radio" name="q13" value="2"> were travelling</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>15. The children ___ (play) outside, so they were dirty.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="0"> had been playing</label>
+                        <label><input type="radio" name="q14" value="1"> had played</label>
+                        <label><input type="radio" name="q14" value="2"> were playing</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Вопросы 16–20 + кнопка Завершить + результат -->
+        <div id="slide4" class="slide">
+            <h1>📝 Тест: Past Perfect Continuous (часть 4/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>16. I ___ (not / feel) well before the doctor came.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="0"> hadn't been feeling</label>
+                        <label><input type="radio" name="q15" value="1"> hadn't felt</label>
+                        <label><input type="radio" name="q15" value="2"> wasn't feeling</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>17. How long ___ you ___ (wait) when the bus finally arrived?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="0"> had / been waiting</label>
+                        <label><input type="radio" name="q16" value="1"> had / waited</label>
+                        <label><input type="radio" name="q16" value="2"> were / waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>18. She ___ (teach) for 20 years before she retired.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="0"> had been teaching</label>
+                        <label><input type="radio" name="q17" value="1"> had taught</label>
+                        <label><input type="radio" name="q17" value="2"> was teaching</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>19. They ___ (argue) about something when I walked in.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="0"> had been arguing</label>
+                        <label><input type="radio" name="q18" value="1"> had argued</label>
+                        <label><input type="radio" name="q18" value="2"> were arguing</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>20. By the time we got home, we ___ (drive) for 10 hours.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="0"> had been driving</label>
+                        <label><input type="radio" name="q19" value="1"> had driven</label>
+                        <label><input type="radio" name="q19" value="2"> were driving</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок для результата -->
+            <div id="result-box" style="display: none;"></div>
+
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_test', test_name='paPC') }}" id="test-form"
+                style="display: inline;">
+                <input type="hidden" name="score" id="score-input" value="0">
+                <button type="button" onclick="finishTestAndSubmit()" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+
+    <script>
+        // --- Правильные ответы для Past Perfect Continuous (индексы 0-2) ---
+        const correctAnswers = [
+            0, // q0: had been waiting
+            0, // q1: had been working
+            0, // q2: hadn't been sleeping
+            0, // q3: Had / been studying
+            0, // q4: had been walking
+            0, // q5: had / been dating
+            0, // q6: had been raining
+            0, // q7: hadn't been attending
+            0, // q8: had been living
+            0, // q9: had been painting
+            0, // q10: had been waiting
+            0, // q11: Had / been crying
+            0, // q12: had been running
+            0, // q13: had been travelling
+            0, // q14: had been playing
+            0, // q15: hadn't been feeling
+            0, // q16: had / been waiting
+            0, // q17: had been teaching
+            0, // q18: had been arguing
+            0  // q19: had been driving
+        ];
+
+        let userAnswers = new Array(20).fill(null);
+        let current = 1;
+        const total = 4;
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+
+        function setupRadioListeners() {
+            for (let i = 0; i < 20; i++) {
+                const radios = document.getElementsByName(`q${i}`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.checked) {
+                            userAnswers[i] = parseInt(this.value);
+                        }
+                    });
+                });
+            }
+        }
+
+        function restoreRadioFromAnswers() {
+            for (let i = 0; i < 20; i++) {
+                const answer = userAnswers[i];
+                if (answer !== null) {
+                    const radios = document.getElementsByName(`q${i}`);
+                    radios.forEach(radio => {
+                        if (parseInt(radio.value) === answer) {
+                            radio.checked = true;
+                        }
+                    });
+                }
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+            for (let i = 0; i < 20; i++) {
+                if (userAnswers[i] !== null && userAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+            return score;
+        }
+
+        function finishTest() {
+            let score = calculateScore();
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+        }
+
+        function finishTestAndSubmit() {
+            let score = calculateScore();
+            // Показываем результат
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+            // Заполняем скрытое поле и отправляем форму
+            document.getElementById('score-input').value = score;
+            document.getElementById('test-form').submit();
+        }
+
+        window.onload = function () {
+            setupRadioListeners();
+            restoreRadioFromAnswers();
+        };
+    </script>
+</body>
+
+</html>

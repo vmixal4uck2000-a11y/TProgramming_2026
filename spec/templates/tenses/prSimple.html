@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <div id="slide1" class="slide active">
+            <div>
+                <h1>🎬 Знакомьтесь, Present Simple!</h1>
+
+                <div class="card-content">
+                    <p>Present Simple — это база, с которой начинается всё. Если действие происходит «вообще», «иногда»,
+                        «по
+                        привычке» или «по расписанию» — это оно!</p>
+
+                    <h3>Когда используем:</h3>
+                    <ul>
+                        <li>
+                            <p>🔄<strong>Регулярные действия:</strong> то, что мы делаем каждый день, часто или редко.
+                                (Я хожу в зал по вторникам.)</p>
+                        </li>
+
+                        <li>
+                            <p>🌍<strong>Факты и законы природы:</strong> то, что всегда правда. (Солнце встает на
+                                востоке. Вода
+                                кипит
+                                при 100
+                                градусах.)</p>
+                        </li>
+
+                        <li>
+                            <p>🗓<strong>Расписания:</strong> официальные графики, транспорт, сеансы в кино. (Поезд
+                                отправляется в
+                                7.)</p>
+                        </li>
+
+                        <li>
+                            <p>💭<strong>Состояния и чувства:</strong> когда мы не делаем, а просто являемся или
+                                чувствуем.
+                                (Люблю,
+                                знаю, хочу
+                                — с ними
+                                Present Simple best friend.)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <div id="slide2" class="slide">
+            <div>
+                <h1>🛠 Как слепить предложение (утверждение)</h1>
+
+                <div class="card-content">
+                    Формула простая: Кто? + Что делает?<br>
+
+                    Всё зависит от того, кто именно это делает:
+                    <ul>
+                        <li>👥 Я, ты, мы, они (I, You, We, They) — глагол отдыхает, стоит как в словаре (без to).
+
+                            <p>👉They live in Moscow. (Они живут в Москве.)</p>
+
+                            <p>👉I like pizza. (Я люблю пиццу.)</p>
+                        </li>
+
+                        <li>🧑‍🏫 Он, она, оно (He, She, It) — глагол надевает костюмчик: добавляем -s или -es.
+
+                            <p>👉He liveS in Moscow. (Он живет в Москве.)</p>
+
+                            <p>👉She likeS pizza. (Она любит пиццу.)</p>
+                        </li>
+                    </ul>
+                    <strong>Важно!</strong> Если глагол заканчивается на -s, -sh, -ch, -x, -o — зовём -es: go → goes,
+                    watch → watches,
+                    kiss →
+                    kisses.
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <div id="slide3" class="slide">
+            <div>
+                <h1>🙅‍♂️ Отрицания и ❓ Вопросы — вызовем подмогу!</h1>
+
+                <div class="card-content">Тут без помощника do (и его брата does) не обойтись.
+                    <ul>
+                        <li><strong>Отрицание:</strong> ставим do not (don't) или does not (doesn't) перед глаголом.
+                            Глагол после них всегда без
+                            хвостиков!
+
+                            <p>👉I don't like broccoli. (Я не люблю брокколи.)</p>
+
+                            <p>👉He doesn't smoke. (Он не курит.) — НЕ "doesn't smokes"!</p>
+                        </li>
+
+                        <li><strong>Вопрос:</strong> выносим Do или Does в самое начало, потом кто?, потом глагол без
+                            окончания.
+
+                            <p>👉Do you speak English? (Ты говоришь по-английски?)</p>
+
+                            <p>👉Does she work here? (Она здесь работает?) — НЕ "Does she works".</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <div id="slide4" class="slide">
+            <div>
+                <h1>📍 Слова-маячки (маркеры)</h1>
+                <div class="card-content">
+                    Если видишь одно из этих слов — смело используй Present Simple! Они обожают друг друга.
+
+                    <strong>Частотность (ставятся перед глаголом):</strong>
+                    <ul>
+                        <li>
+                            <p>🔴 always (всегда)</p>
+                        </li>
+
+                        <li>
+                            <p>🟡 usually (обычно)</p>
+                        </li>
+
+                        <li>
+                            <p>🟢 often (часто)</p>
+                        </li>
+
+                        <li>
+                            <p>🔵 sometimes (иногда)</p>
+                        </li>
+
+                        <li>
+                            <p>🟣 never (никогда)</p>
+                        </li>
+                    </ul>
+
+                    <strong>Регулярность (обычно в конце фразы):</strong>
+
+                    <li>
+                        <p>📍every day/week/month (каждый день/неделю/месяц)</p>
+                    </li>
+
+                    <li>
+                        <p>📍on Mondays (по понедельникам)</p>
+                    </li>
+
+                    <li>
+                        <p>📍in the morning/evening (утром/вечером)</p>
+                    </li>
+
+                    <li>
+                        <p>📍twice a year (дважды в год)</p>
+                    </li>
+
+                    <strong>👉Пример:</strong> I never drink coffee in the evening. (Я никогда не пью кофе вечером.)
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <div id="slide5" class="slide">
+            <div>
+                <h1>🚫 Ошибки, которые бесят (и как их избежать)</h1>
+                <div class="card-content">
+                    <ul>
+                        <li>❌ Ошибка 1: Пропуск -s у He/She/It
+
+                            <p>He go to school. ❌</p>
+
+                            <p>He goes to school. ✅</p>
+
+                            <p>Фишка: Для he/she/it окончание -s обязательно! Без него англичанин подумает, что ты про
+                                "они"
+                                или
+                                "я".</p>
+                        </li>
+
+                        <li>❌ Ошибка 2: Двойная помощь (does + глагол с -s)
+
+                            <p>Does he works? ❌</p>
+
+                            <p>Does he work? ✅</p>
+
+                            <p>Фишка: Если в вопросе уже есть does, он забрал себе все полномочия. Глагол отдыхает и
+                                стоит
+                                голый.</p>
+                        </li>
+
+                        <li>❌ Ошибка 3: am/is/are + глагол
+
+                            <p>I am work here. ❌</p>
+
+                            <p>I work here. ✅</p>
+
+                            <p>Фишка: Am/is/are — это самостоятельные ребята. Они не любят, когда к ним лепят другие
+                                глаголы.
+                                Они
+                                дружат с прилагательными (I am happy) и существительными (He is a doctor), но не с
+                                глаголами
+                                действия.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_tense', tense_name='prSimple') }}"
+                style="display: inline;">
+                <button type="submit" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function goToRules() {
+            window.location.href = "{{ url_for('rules') }}";
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>
