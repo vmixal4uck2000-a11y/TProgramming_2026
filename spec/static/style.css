@@ -1,0 +1,200 @@
+body {
+    display: grid;
+    /* Включаем Grid */
+    grid-template-rows: auto 1fr auto;
+    /* 3 строки: навигация, контент, футер */
+    min-height: 100vh;
+    /* Минимальная высота = 100vh */
+    margin: 0;
+    background: linear-gradient(135deg, #e0e7ff, #f0e7ff);
+}
+
+header {
+    padding: 40px 20px;
+    background-color: #667eea;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+ul {
+    line-height: 1.6;
+}
+
+
+/* Стили для футера */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #667eea;
+    border-top: 1px solid #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.nav-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* одинаковый отступ слева и справа */
+    height: 70px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 20px;
+}
+
+.left-group {
+    display: flex;
+    gap: 15px;
+    /* отступ между кнопками слева */
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #5a67d8;
+}
+
+.intro {
+    padding: 60px 20px;
+    background-color: #667eea;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.solution ul li {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.solution ul li::before {
+    content: "🚀";
+    margin-right: 10px;
+}
+
+.problem {
+    margin: 15px 0;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    border-left: 5px solid #ffd966;
+}
+
+.solution {
+    margin: 15px 0;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    border-left: 5px solid #ffd966;
+}
+
+.problem ul li {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.problem ul li::before {
+    content: "⚡";
+    margin-right: 10px;
+}
+
+.cta {
+    padding: 60px 20px;
+    background-color: #667eea;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.cta-button.primary {
+    background: white;
+    color: #667eea;
+    border: 2px solid white;
+}
+
+.cta-button.primary:hover {
+    background: transparent;
+    color: white;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: #667eea;
+}

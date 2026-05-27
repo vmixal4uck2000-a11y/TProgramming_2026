@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Тест: Future Perfect Continuous</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='test_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Вопросы 1–5 -->
+        <div id="slide1" class="slide active">
+            <h1>📝 Тест: Future Perfect Continuous (часть 1/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>1. By next month, I ___ (work) here for five years.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q0" value="0"> will have been working</label>
+                        <label><input type="radio" name="q0" value="1"> will have worked</label>
+                        <label><input type="radio" name="q0" value="2"> will be working</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>2. How long ___ you ___ (wait) when the bus finally arrives?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="0"> will you have been waiting</label>
+                        <label><input type="radio" name="q1" value="1"> will you have waited</label>
+                        <label><input type="radio" name="q1" value="2"> will you be waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>3. She ___ (not / study) for long when the exam starts.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="0"> won't have been studying</label>
+                        <label><input type="radio" name="q2" value="1"> won't have studied</label>
+                        <label><input type="radio" name="q2" value="2"> won't be studying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>4. By the time we get home, we ___ (drive) for 12 hours.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="0"> will have been driving</label>
+                        <label><input type="radio" name="q3" value="1"> will have driven</label>
+                        <label><input type="radio" name="q3" value="2"> will be driving</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>5. They ___ (live) here for ten years by next summer.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="0"> will have been living</label>
+                        <label><input type="radio" name="q4" value="1"> will have lived</label>
+                        <label><input type="radio" name="q4" value="2"> will be living</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Вопросы 6–10 -->
+        <div id="slide2" class="slide">
+            <h1>📝 Тест: Future Perfect Continuous (часть 2/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>6. By midnight, she ___ (sleep) for eight hours.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="0"> will have been sleeping</label>
+                        <label><input type="radio" name="q5" value="1"> will have slept</label>
+                        <label><input type="radio" name="q5" value="2"> will be sleeping</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>7. He ___ (train) for the marathon for months by the time it starts.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="0"> will have been training</label>
+                        <label><input type="radio" name="q6" value="1"> will have trained</label>
+                        <label><input type="radio" name="q6" value="2"> will be training</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>8. How long ___ they ___ (date) by the end of this year?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="0"> will they have been dating</label>
+                        <label><input type="radio" name="q7" value="1"> will they have dated</label>
+                        <label><input type="radio" name="q7" value="2"> will they be dating</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>9. We ___ (not / wait) long before the train arrives.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="0"> won't have been waiting</label>
+                        <label><input type="radio" name="q8" value="1"> won't have waited</label>
+                        <label><input type="radio" name="q8" value="2"> won't be waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>10. By next week, I ___ (read) this book for a month.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="0"> will have been reading</label>
+                        <label><input type="radio" name="q9" value="1"> will have read</label>
+                        <label><input type="radio" name="q9" value="2"> will be reading</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Вопросы 11–15 -->
+        <div id="slide3" class="slide">
+            <h1>📝 Тест: Future Perfect Continuous (часть 3/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>11. ___ she ___ (study) English for two years by next spring?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="0"> Will she have been studying</label>
+                        <label><input type="radio" name="q10" value="1"> Will she have studied</label>
+                        <label><input type="radio" name="q10" value="2"> Will she be studying</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>12. They ___ (build) this house for over a year by the time it's finished.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="0"> will have been building</label>
+                        <label><input type="radio" name="q11" value="1"> will have built</label>
+                        <label><input type="radio" name="q11" value="2"> will be building</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>13. I ___ (not / feel) well for long before the medicine kicks in.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="0"> won't have been feeling</label>
+                        <label><input type="radio" name="q12" value="1"> won't have felt</label>
+                        <label><input type="radio" name="q12" value="2"> won't be feeling</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>14. By the end of this month, we ___ (know) each other for ten years.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="0"> will have known</label>
+                        <label><input type="radio" name="q13" value="1"> will have been knowing</label>
+                        <label><input type="radio" name="q13" value="2"> will be knowing</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>15. He ___ (work) on this project for three months by Friday.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="0"> will have been working</label>
+                        <label><input type="radio" name="q14" value="1"> will have worked</label>
+                        <label><input type="radio" name="q14" value="2"> will be working</label>
+                    </div>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Вопросы 16–20 + кнопка Завершить + результат -->
+        <div id="slide4" class="slide">
+            <h1>📝 Тест: Future Perfect Continuous (часть 4/4)</h1>
+            <div class="card-content">
+                <div class="question-item">
+                    <p>16. How long ___ you ___ (live) in this city by next year?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="0"> will you have been living</label>
+                        <label><input type="radio" name="q15" value="1"> will you have lived</label>
+                        <label><input type="radio" name="q15" value="2"> will you be living</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>17. She ___ (cook) all morning before the guests arrive.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="0"> will have been cooking</label>
+                        <label><input type="radio" name="q16" value="1"> will have cooked</label>
+                        <label><input type="radio" name="q16" value="2"> will be cooking</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>18. We ___ (travel) for 24 hours by the time we reach our destination.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="0"> will have been travelling</label>
+                        <label><input type="radio" name="q17" value="1"> will have travelled</label>
+                        <label><input type="radio" name="q17" value="2"> will be travelling</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>19. ___ they ___ (wait) long by the time we get there?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="0"> Will they have been waiting</label>
+                        <label><input type="radio" name="q18" value="1"> Will they have waited</label>
+                        <label><input type="radio" name="q18" value="2"> Will they be waiting</label>
+                    </div>
+                </div>
+                <div class="question-item">
+                    <p>20. I'm sure he ___ (sleep) when we arrive.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="0"> will have been sleeping</label>
+                        <label><input type="radio" name="q19" value="1"> will have slept</label>
+                        <label><input type="radio" name="q19" value="2"> will be sleeping</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок для результата -->
+            <div id="result-box" style="display: none;"></div>
+
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_test', test_name='fuPC') }}" id="test-form"
+                style="display: inline;">
+                <input type="hidden" name="score" id="score-input" value="0">
+                <button type="button" onclick="finishTestAndSubmit()" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+
+    <script>
+        // --- Правильные ответы для Future Perfect Continuous (индексы 0-2) ---
+        const correctAnswers = [
+            0, // q0: will have been working
+            0, // q1: will you have been waiting
+            0, // q2: won't have been studying
+            0, // q3: will have been driving
+            0, // q4: will have been living
+            0, // q5: will have been sleeping
+            0, // q6: will have been training
+            0, // q7: will they have been dating
+            0, // q8: won't have been waiting
+            0, // q9: will have been reading
+            0, // q10: Will she have been studying
+            0, // q11: will have been building
+            0, // q12: won't have been feeling
+            0, // q13: will have known (stative verb, правильный вариант Simple)
+            0, // q14: will have been working
+            0, // q15: will you have been living
+            0, // q16: will have been cooking
+            0, // q17: will have been travelling
+            0, // q18: Will they have been waiting
+            2  // q19: will be sleeping (потому что это процесс в будущем, а не длительность до момента)
+        ];
+
+        let userAnswers = new Array(20).fill(null);
+        let current = 1;
+        const total = 4;
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+
+        function setupRadioListeners() {
+            for (let i = 0; i < 20; i++) {
+                const radios = document.getElementsByName(`q${i}`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.checked) {
+                            userAnswers[i] = parseInt(this.value);
+                        }
+                    });
+                });
+            }
+        }
+
+        function restoreRadioFromAnswers() {
+            for (let i = 0; i < 20; i++) {
+                const answer = userAnswers[i];
+                if (answer !== null) {
+                    const radios = document.getElementsByName(`q${i}`);
+                    radios.forEach(radio => {
+                        if (parseInt(radio.value) === answer) {
+                            radio.checked = true;
+                        }
+                    });
+                }
+            }
+        }
+
+        function calculateScore() {
+            let score = 0;
+            for (let i = 0; i < 20; i++) {
+                if (userAnswers[i] !== null && userAnswers[i] === correctAnswers[i]) {
+                    score++;
+                }
+            }
+            return score;
+        }
+
+        function finishTest() {
+            let score = calculateScore();
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+        }
+
+        function finishTestAndSubmit() {
+            let score = calculateScore();
+            // Показываем результат
+            const resultBox = document.getElementById('result-box');
+            resultBox.style.display = 'block';
+            resultBox.innerHTML = `✅ Правильных ответов: ${score} из 20`;
+            // Заполняем скрытое поле и отправляем форму
+            document.getElementById('score-input').value = score;
+            document.getElementById('test-form').submit();
+        }
+
+        window.onload = function () {
+            setupRadioListeners();
+            restoreRadioFromAnswers();
+        };
+    </script>
+</body>
+
+</html>

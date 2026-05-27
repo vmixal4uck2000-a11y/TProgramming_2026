@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- Simple Tenses Group -->
+        <div class="tenses-group present-group">
+            <h2 class="group-title">Simple Tenses</h2>
+            <div class="tenses-row">
+                <a href="{{ url_for('show_tense', tense_name='prSimple') }}" class="tense-card">
+                    <span class="tense-name">Present Simple</span>
+                    <span class="tense-example">I work every day</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='paSimple') }}" class="tense-card">
+                    <span class="tense-name">Past Simple</span>
+                    <span class="tense-example">I worked yesterday</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='fuSimple') }}" class="tense-card">
+                    <span class="tense-name">Future Simple</span>
+                    <span class="tense-example">I will work tomorrow</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Continuous Tenses Group -->
+        <div class="tenses-group past-group">
+            <h2 class="group-title">Continuous Tenses</h2>
+            <div class="tenses-row">
+                <a href="{{ url_for('show_tense', tense_name='prContinuous') }}" class="tense-card">
+                    <span class="tense-name">Present Continuous</span>
+                    <span class="tense-example">I am working now</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='paContinuous') }}" class="tense-card">
+                    <span class="tense-name">Past Continuous</span>
+                    <span class="tense-example">I was working at 5 PM</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='fuContinuous') }}" class="tense-card">
+                    <span class="tense-name">Future Continuous</span>
+                    <span class="tense-example">I will be working</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Perfect Tenses Group -->
+        <div class="tenses-group future-group">
+            <h2 class="group-title">Perfect Tenses</h2>
+            <div class="tenses-row">
+                <a href="{{ url_for('show_tense', tense_name='prPerfect') }}" class="tense-card">
+                    <span class="tense-name">Present Perfect</span>
+                    <span class="tense-example">I have worked today</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='paPerfect') }}" class="tense-card">
+                    <span class="tense-name">Past Perfect</span>
+                    <span class="tense-example">I had worked by then</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='fuPerfect') }}" class="tense-card">
+                    <span class="tense-name">Future Perfect</span>
+                    <span class="tense-example">I will have worked</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Perfect Continuous Tenses Group -->
+        <div class="tenses-group perfect-continuous-group">
+            <h2 class="group-title">Perfect Continuous Tenses</h2>
+            <div class="tenses-row">
+                <a href="{{ url_for('show_tense', tense_name='prPC') }}" class="tense-card">
+                    <span class="tense-name">Present Perfect Cont.</span>
+                    <span class="tense-example">I have been working</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='paPC') }}" class="tense-card">
+                    <span class="tense-name">Past Perfect Cont.</span>
+                    <span class="tense-example">I had been working</span>
+                </a>
+                <a href="{{ url_for('show_tense', tense_name='fuPC') }}" class="tense-card">
+                    <span class="tense-name">Future Perfect Cont.</span>
+                    <span class="tense-example">I will have been working</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>

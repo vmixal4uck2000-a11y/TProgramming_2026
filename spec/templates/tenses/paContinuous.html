@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Введение -->
+        <div id="slide1" class="slide active">
+            <div>
+                <h1>🕰 Знакомьтесь, Past Continuous!</h1>
+                <div class="card-content">
+                    <p>Past Continuous (или Past Progressive) — это время, которое показывает <strong>процесс в
+                            прошлом</strong>. Мы не просто говорим, что что‑то случилось, а подчёркиваем, что это
+                        <strong>длилось какое‑то время</strong> или было фоном для другого события.
+                    </p>
+                    <h3>Когда используем:</h3>
+                    <ul>
+                        <li>
+                            <p>⏰ <strong>Действие в конкретный момент в прошлом:</strong> (Вчера в 6 вечера я смотрел
+                                телевизор.)</p>
+                        </li>
+                        <li>
+                            <p>🔄 <strong>Два параллельных действия:</strong> (Пока я готовил ужин, дети рисовали.)</p>
+                        </li>
+                        <li>
+                            <p>⚡️ <strong>Прерванное действие (when + Past Simple):</strong> (Я принимал душ, когда
+                                зазвонил телефон.)</p>
+                        </li>
+                        <li>
+                            <p>🎨 <strong>Описание атмосферы, фона:</strong> (Светило солнце, птицы пели.)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Утверждение -->
+        <div id="slide2" class="slide">
+            <div>
+                <h1>🏗 Как слепить утверждение</h1>
+                <div class="card-content">
+                    <p>Формула: <strong>was/were + глагол с окончанием -ing</strong>.</p>
+                    <ul>
+                        <li>
+                            👤 <strong>I / He / She / It → was</strong>
+                            <p>👉 I <strong>was reading</strong> a book at 8 pm. (Я читал книгу в 8 вечера.)</p>
+                            <p>👉 She <strong>was sleeping</strong> when I came. (Она спала, когда я пришёл.)</p>
+                        </li>
+                        <li>
+                            👥 <strong>You / We / They → were</strong>
+                            <p>👉 We <strong>were watching</strong> a movie all evening. (Мы смотрели фильм весь вечер.)
+                            </p>
+                            <p>👉 They <strong>were playing</strong> football while it was raining. (Они играли в
+                                футбол, пока шёл дождь.)</p>
+                        </li>
+                    </ul>
+                    <p><strong>Правила прибавления -ing</strong> (те же, что и в Present Continuous):</p>
+                    <ul>
+                        <li>
+                            <p>🔹 обычно +ing: play → playing</p>
+                        </li>
+                        <li>
+                            <p>🔹 глаголы на -e → e выпадает: make → making</p>
+                        </li>
+                        <li>
+                            <p>🔹 короткие глаголы (одна гласная + одна согласная под ударением) → удвоение: sit →
+                                sitting, run → running</p>
+                        </li>
+                        <li>
+                            <p>🔹 -ie → -y: lie → lying</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Отрицания и вопросы -->
+        <div id="slide3" class="slide">
+            <div>
+                <h1>🙅 Отрицания и ❓ Вопросы</h1>
+                <div class="card-content">
+                    <p>Работаем с was/were так же, как с am/is/are в настоящем.</p>
+                    <ul>
+                        <li>
+                            <strong>Отрицание:</strong> was/were + not (сокращения: wasn't / weren't)
+                            <p>👉 I <strong>wasn't sleeping</strong> at midnight. (Я не спал в полночь.)</p>
+                            <p>👉 They <strong>weren't listening</strong> to the teacher. (Они не слушали учителя.)</p>
+                        </li>
+                        <li>
+                            <strong>Вопрос:</strong> Was/Were + кто? + глагол -ing?
+                            <p>👉 <strong>Were</strong> you <strong>working</strong> at 5 pm? (Ты работал в 5 вечера?)
+                            </p>
+                            <p>👉 <strong>Was</strong> she <strong>waiting</strong> for us? (Она ждала нас?)</p>
+                        </li>
+                    </ul>
+                    <p>✅ Краткие ответы: Yes, I was. / No, I wasn't. Yes, they were. / No, they weren't.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Слова-маркеры -->
+        <div id="slide4" class="slide">
+            <div>
+                <h1>⏳ Слова-маркеры (указатели времени)</h1>
+                <div class="card-content">
+                    <p>Эти слова или фразы помогут понять, что нужен Past Continuous.</p>
+                    <ul>
+                        <li>
+                            <p>🕐 <strong>at 5 o'clock yesterday</strong> (вчера в 5 часов)</p>
+                        </li>
+                        <li>
+                            <p>📅 <strong>all day yesterday / all morning</strong> (весь день вчера / всё утро)</p>
+                        </li>
+                        <li>
+                            <p>🔄 <strong>from 2 to 3 pm yesterday</strong> (с 2 до 3 вчера)</p>
+                        </li>
+                        <li>
+                            <p>⚡️ <strong>when + Past Simple</strong> (когда случилось другое действие): I was cooking
+                                when he arrived.</p>
+                        </li>
+                        <li>
+                            <p>🤝 <strong>while</strong> (в то время как): While I was cooking, he was watching TV.</p>
+                        </li>
+                        <li>
+                            <p>🎬 <strong>at that moment / at that time</strong> (в тот момент)</p>
+                        </li>
+                    </ul>
+                    <p>👉 Yesterday at 8 pm I <strong>was having</strong> dinner with friends.</p>
+                    <p>👉 He <strong>was driving</strong> while talking on the phone.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 5: Типичные ошибки -->
+        <div id="slide5" class="slide">
+            <div>
+                <h1>💥 Ошибки, которые бесят (и как их избежать)</h1>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            ❌ <strong>Ошибка 1: Забыли was/were</strong>
+                            <p>I working at 5 pm. ❌</p>
+                            <p>I <strong>was working</strong> at 5 pm. ✅</p>
+                            <p><em>Фишка:</em> Без вспомогательного глагола (was/were) предложение теряет время. Он
+                                обязателен!</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 2: Путаем Past Simple и Past Continuous</strong>
+                            <p>I watched TV when he arrived. ❌ (если хотим сказать, что смотрел ТВ и в этот момент он
+                                пришёл)</p>
+                            <p>I <strong>was watching</strong> TV when he arrived. ✅</p>
+                            <p><em>Фишка:</em> Past Continuous — фон (длительное действие), Past Simple — короткое
+                                действие, которое его прервало.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 3: Неправильное -ing</strong>
+                            <p>She was writeing a letter. ❌</p>
+                            <p>She was <strong>writing</strong> a letter. ✅</p>
+                            <p><em>Фишка:</em> Помни про выпадение -e и удвоение согласных.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 4: Глаголы состояния (stative verbs) в Continuous</strong>
+                            <p>I was knowing the answer. ❌</p>
+                            <p>I knew the answer. ✅</p>
+                            <p><em>Фишка:</em> Глаголы чувств, мнения, обладания (know, like, love, hate, want, need,
+                                believe) обычно не употребляются в Continuous. Они описывают состояние, а не процесс.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_tense', tense_name='paContinuous') }}"
+                style="display: inline;">
+                <button type="submit" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function goToRules() {
+            window.location.href = "{{ url_for('rules') }}";
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+    </script>
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>

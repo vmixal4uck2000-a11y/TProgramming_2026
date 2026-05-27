@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт-визитка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='rule_style.css') }}">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-panel">
+            <div class="left-group">
+                <form action="{{ url_for('index') }}" method="GET">
+                    <button type="submit" class="nav-button">Главная</button>
+                </form>
+                <form action="{{ url_for('rules') }}" method="GET">
+                    <button class="nav-button">Теория</button>
+                </form>
+                <form action="{{ url_for('tests') }}" method="GET">
+                    <button class="nav-button">Тесты</button>
+                </form>
+            </div>
+            <form action="{{ url_for('lk') }}" method="GET">
+                <button class="nav-button">Личный кабинет</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="tenses-container">
+        <!-- СЛАЙД 1: Введение -->
+        <div id="slide1" class="slide active">
+            <div>
+                <h1>🔮 Знакомьтесь, Future Simple!</h1>
+                <div class="card-content">
+                    <p>Future Simple — это твой помощник, когда нужно сказать о том, что <strong>будет</strong>. Без
+                        планов, без договорённостей — просто говорим о будущем.</p>
+                    <h3>Когда используем:</h3>
+                    <ul>
+                        <li>
+                            <p>🔮 <strong>Предсказания (без фактов):</strong> (Я думаю, завтра будет дождь.)</p>
+                        </li>
+                        <li>
+                            <p>⚡️ <strong>Спонтанные решения:</strong> (О, я отвечу на звонок! — решение принято прямо
+                                сейчас.)</p>
+                        </li>
+                        <li>
+                            <p>🤝 <strong>Обещания и угрозы:</strong> (Я помогу тебе. Обещаю.)</p>
+                        </li>
+                        <li>
+                            <p>📌 <strong>Факты в будущем:</strong> (Ему исполнится 20 лет в мае.)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 2: Утверждение -->
+        <div id="slide2" class="slide">
+            <div>
+                <h1>🧱 Как построить утверждение</h1>
+                <div class="card-content">
+                    <p>Формула — проще некуда: <strong>Кто? + will + глагол (в начальной форме)</strong>. Никаких
+                        окончаний, никаких изменений.</p>
+                    <ul>
+                        <li>
+                            <p>✅ I <strong>will call</strong> you later. (Я позвоню тебе позже.)</p>
+                            <p>✅ She <strong>will be</strong> happy. (Она будет счастлива.)</p>
+                            <p>✅ They <strong>will arrive</strong> tomorrow. (Они прибудут завтра.)</p>
+                        </li>
+                    </ul>
+                    <p>🤓 <strong>Для фанатов старой школы:</strong> В английском когда-то использовали
+                        <strong>shall</strong> для I и We. Сейчас это редкость (в основном в официальных документах или
+                        пафосных фразах).
+                    </p>
+                    <p>👉 I shall return! (Я вернусь!) — звучит как Терминатор.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 3: Отрицания и вопросы -->
+        <div id="slide3" class="slide">
+            <div>
+                <h1>🙅 Отрицания и ❓ Вопросы</h1>
+                <div class="card-content">
+                    <p>Всё так же просто — <strong>will</strong> сам делает всю работу.</p>
+                    <ul>
+                        <li>
+                            <strong>Отрицание:</strong> will + not → <strong>will not / won't</strong> (сокращение)
+                            <p>👉 I <strong>will not (won't)</strong> tell anyone. (Я никому не скажу.)</p>
+                            <p>👉 He <strong>won't</strong> be late. (Он не опоздает.)</p>
+                        </li>
+                        <li>
+                            <strong>Вопрос:</strong> Will + кто? + глагол?
+                            <p>👉 <strong>Will</strong> you <strong>come</strong> to the party? (Ты придёшь на
+                                вечеринку?)</p>
+                            <p>👉 <strong>Will</strong> it <strong>rain</strong> tomorrow? (Завтра будет дождь?)</p>
+                        </li>
+                    </ul>
+                    <p>✅ Краткие ответы: Yes, I will. / No, I won't.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 4: Слова-маркеры -->
+        <div id="slide4" class="slide">
+            <div>
+                <h1>📅 Слова-маркеры (указатели на будущее)</h1>
+                <div class="card-content">
+                    <p>Эти слова любят Future Simple. Если видишь одно из них — смело ставь will.</p>
+                    <ul>
+                        <li>
+                            <p>⏰ <strong>tomorrow</strong> (завтра)</p>
+                        </li>
+                        <li>
+                            <p>📆 <strong>next</strong> week/month/year (на следующей неделе / в следующем месяце / в
+                                следующем году)</p>
+                        </li>
+                        <li>
+                            <p>🔜 <strong>soon</strong> (скоро)</p>
+                        </li>
+                        <li>
+                            <p>⏳ <strong>in + время</strong> (in an hour, in 2026)</p>
+                        </li>
+                        <li>
+                            <p>🤞 <strong>I hope, I think, I'm sure</strong> (я надеюсь, я думаю, я уверен) — они часто
+                                указывают на предположение о будущем.</p>
+                        </li>
+                    </ul>
+                    <p>👉 I think it <strong>will rain</strong> tomorrow.</p>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <button onclick="next()" class="slide-btn">Далее</button>
+        </div>
+
+        <!-- СЛАЙД 5: Типичные ошибки -->
+        <div id="slide5" class="slide">
+            <div>
+                <h1>🚫 Ошибки, которые бесят (и как их избежать)</h1>
+                <div class="card-content">
+                    <ul>
+                        <li>
+                            ❌ <strong>Ошибка 1: Забыли will</strong>
+                            <p>I call you later. ❌</p>
+                            <p>I <strong>will call</strong> you later. ✅</p>
+                            <p><em>Фишка:</em> Без will это звучит как привычное действие в настоящем. Не ленись
+                                добавлять will.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 2: Глагол с to или с окончанием</strong>
+                            <p>She will to come. ❌</p>
+                            <p>She will comes. ❌</p>
+                            <p>She <strong>will come</strong>. ✅</p>
+                            <p><em>Фишка:</em> После will глагол всегда голый (без to и без окончаний).</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 3: Will после if/when</strong>
+                            <p>If it will rain, I stay home. ❌</p>
+                            <p>If it <strong>rains</strong>, I will stay home. ✅</p>
+                            <p><em>Фишка:</em> В придаточных условия/времени (if, when, as soon as) мы используем
+                                Present Simple, а будущее ставим только в главной части.</p>
+                        </li>
+                        <li>
+                            ❌ <strong>Ошибка 4: Путаем will и going to</strong>
+                            <p>Look at those clouds! It will rain. ❌ (если облака уже видны — нужен going to)</p>
+                            <p>Look at those clouds! It is going to rain. ✅</p>
+                            <p><em>Фишка:</em> Will — для спонтанных решений и предсказаний без доказательств. Going to
+                                — когда есть признаки или планы.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button onclick="prev()" class="slide-btn">Назад</button>
+            <form method="POST" action="{{ url_for('complete_tense', tense_name='fuSimple') }}"
+                style="display: inline;">
+                <button type="submit" class="slide-btn">Завершить</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        let current = 1;
+        const total = 5;
+
+        function goToRules() {
+            window.location.href = "{{ url_for('rules') }}";
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= total; i++) {
+                document.getElementById(`slide${i}`).classList.remove('active');
+            }
+            document.getElementById(`slide${n}`).classList.add('active');
+        }
+
+        function next() {
+            if (current < total) {
+                current++;
+                showSlide(current);
+            }
+        }
+
+        function prev() {
+            if (current > 1) {
+                current--;
+                showSlide(current);
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2026 Мой сайт. Учебная практика.</p>
+    </footer>
+</body>
+
+</html>
