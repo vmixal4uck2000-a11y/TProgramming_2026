@@ -3,7 +3,7 @@
     private _name: string;
     private _str: number;
     private _klass: string;
-    private _gorit: boolean = false;
+    _gorit: boolean = false;
     _stan: boolean = false;
 
     constructor(hp : number, name: string, str: number, klass: string) {
@@ -26,6 +26,7 @@
     }
     take_uron(uron: number): void{
         this._hp -= uron;
+        if (this._hp < 0) this._hp = 0;
     }
     ataka(vrag: HERO, uron: number): void{
         vrag.take_uron(uron);
@@ -86,8 +87,12 @@ export class LUCHNIK extends HERO {
     skill(vrag: HERO): void {
         if(!this.used_fire) {
             this.used_fire = true;
-            vrag.gorit();
+            vrag._gorit = true;
+        
             console.log(`${this.get_name()}(${this.get_klass()}) использует Огненную стрелу`);
+        }
+        else {
+            this.ataka(vrag, this.get_str())
         }
     }
 }

@@ -25,10 +25,8 @@ describe("Лучник LUCHNIK", () => {
         const target = new SER_RITSAR(100, 10, "Цель");
         archer.skill(target);
         expect(target.get_hp()).toBe(100);
-        target.gorit();
-        expect(target.get_hp()).toBe(98);
         archer.skill(target);
-        expect(target.get_hp()).toBe(88);
+        expect(target.get_hp()).toBe(90);
     });
 });
 describe("Бой BOY", () => {
